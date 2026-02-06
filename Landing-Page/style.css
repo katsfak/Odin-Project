@@ -1,0 +1,253 @@
+/* Load the Roboto font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+/* Global reset for consistent box sizing and spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base page typography and colors */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  line-height: 1.4;
+}
+
+/* Shared link styling */
+a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+/* Content width and horizontal padding */
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header background and text colors */
+.site-header {
+  background: #1f2937;
+  color: #f9faf8;
+}
+
+/* Header layout for logo and navigation */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+/* Logo typography */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f9faf8;
+}
+
+/* Horizontal nav links */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hero section background and spacing */
+.hero {
+  background: #1f2937;
+  color: #f9faf8;
+  padding: 80px 0 100px;
+}
+
+/* Hero layout for text and image */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Hero text column sizing */
+.hero-text {
+  flex: 1;
+}
+
+/* Main hero heading */
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  color: #f9faf8;
+}
+
+/* Hero subtext */
+.hero-text p {
+  color: #e5e7eb;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+/* Placeholder image block */
+.hero-image {
+  flex: 1;
+  background: #6b7280;
+  color: #e5e7eb;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Shared button styles */
+.btn {
+  border: none;
+  padding: 8px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Primary filled button */
+.btn.primary {
+  background: #3882f6;
+  color: #ffffff;
+}
+
+/* Outline button for CTA section */
+.btn.outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 6px 26px;
+}
+
+/* Info section spacing and alignment */
+.info {
+  padding: 48px 0 90px;
+  text-align: center;
+}
+
+/* Info section header */
+.info h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 36px;
+  color: #1f2937;
+}
+
+/* Grid of info cards */
+.info-cards {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual card sizing and text */
+.card {
+  width: 150px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Card illustration box */
+.card .box {
+  border: 3px solid #3882f6;
+  border-radius: 12px;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+}
+
+/* Quote section background and padding */
+.quote {
+  background: #e5e7eb;
+  padding: 80px 0;
+}
+
+/* Quote content width */
+.quote-inner {
+  max-width: 820px;
+}
+
+/* Quote text styling */
+.quote-text {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  color: #1f2937;
+  margin-bottom: 18px;
+}
+
+/* Quote author alignment */
+.quote-author {
+  text-align: right;
+  font-weight: 700;
+}
+
+/* Call-to-action section spacing */
+.cta {
+  padding: 80px 0;
+}
+
+/* CTA container styling */
+.cta-box {
+  background: #3882f6;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 36px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* CTA heading */
+.cta-text h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+/* CTA description */
+.cta-text p {
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* Footer background and typography */
+.site-footer {
+  background: #1f2937;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 900px) {
+  /* Stack hero content on small screens */
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  /* Full-width hero image on small screens */
+  .hero-image {
+    width: 100%;
+  }
+
+  /* Stack CTA content on small screens */
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

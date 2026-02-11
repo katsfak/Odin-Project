@@ -1,0 +1,470 @@
+<!doctype html>
+<!-- Root document for the admin dashboard layout -->
+<html lang="en">
+  <head>
+    <!-- Metadata and page setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Main stylesheet for layout and visual styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Full page layout container -->
+    <div class="layout">
+      <!-- Left sidebar navigation -->
+      <aside class="sidebar">
+        <!-- Brand / logo area -->
+        <div class="brand">
+          <!-- Simple 2x2 icon made of squares -->
+          <div class="brand-icon">
+            <span class="brand-square"></span>
+            <span class="brand-square"></span>
+            <span class="brand-square"></span>
+            <span class="brand-square"></span>
+          </div>
+          <!-- Product name -->
+          <h1>Dashboard</h1>
+        </div>
+        <!-- Main navigation links -->
+        <nav class="nav">
+          <!-- Primary nav item: Home -->
+          <a class="nav-item active" href="#">
+            <!-- Home icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"
+                />
+              </svg>
+            </span>
+            Home
+          </a>
+          <!-- Primary nav item: Profile -->
+          <a class="nav-item" href="#">
+            <!-- Profile icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4Z"
+                />
+              </svg>
+            </span>
+            Profile
+          </a>
+          <!-- Primary nav item: Messages -->
+          <a class="nav-item" href="#">
+            <!-- Messages icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H7l-3 3V7a1 1 0 0 1 1-1Z"
+                />
+              </svg>
+            </span>
+            Messages
+          </a>
+          <!-- Primary nav item: History -->
+          <a class="nav-item" href="#">
+            <!-- History icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 4a8 8 0 1 0 8 8h-2a6 6 0 1 1-6-6V4Zm1 4h-2v5l4 2 1-1.7-3-1.3Z"
+                />
+              </svg>
+            </span>
+            History
+          </a>
+          <!-- Primary nav item: Tasks -->
+          <a class="nav-item" href="#">
+            <!-- Tasks icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm2 4h6v2H9Zm0 4h6v2H9Z"
+                />
+              </svg>
+            </span>
+            Tasks
+          </a>
+          <!-- Primary nav item: Communities -->
+          <a class="nav-item" href="#">
+            <!-- Communities icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 12a3 3 0 1 1 3 3 3 3 0 0 1-3-3Zm7 0a3 3 0 1 1 3 3 3 3 0 0 1-3-3ZM4 20c0-2.2 3-4 6-4s6 1.8 6 4v1H4Z"
+                />
+              </svg>
+            </span>
+            Communities
+          </a>
+          <!-- Divider between primary and secondary groups -->
+          <div class="nav-divider"></div>
+          <!-- Secondary nav item: Settings -->
+          <a class="nav-item" href="#">
+            <!-- Settings icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4Zm9 4-2.2.7.4 2.3-2.1 1.2-1.6-1.7-2.2.7-1.1 2.2h-2.6L9 16.4l-2.2-.7-1.6 1.7-2.1-1.2.4-2.3L3 12l2.2-.7-.4-2.3 2.1-1.2 1.6 1.7L11 8l1.1-2.2h2.6L15 7.6l2.2.7 1.6-1.7 2.1 1.2-.4 2.3Z"
+                />
+              </svg>
+            </span>
+            Settings
+          </a>
+          <!-- Secondary nav item: Support -->
+          <a class="nav-item" href="#">
+            <!-- Support icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8Zm0 12h2v2h-2Zm2.3-5.6-1.1.9a2 2 0 0 0-.7 1.7h-2a3.8 3.8 0 0 1 1.3-3l1.2-1a1.2 1.2 0 0 0-.8-2.1 1.2 1.2 0 0 0-1.2 1.2H9a3 3 0 1 1 5.3 1.3Z"
+                />
+              </svg>
+            </span>
+            Support
+          </a>
+          <!-- Secondary nav item: Privacy -->
+          <a class="nav-item" href="#">
+            <!-- Privacy icon -->
+            <span class="nav-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6Zm-1 5h2v6h-2Zm0 7h2v2h-2Z"
+                />
+              </svg>
+            </span>
+            Privacy
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main page content area -->
+      <main class="main">
+        <!-- Top bar with search and user controls -->
+        <header class="topbar">
+          <!-- Search input area -->
+          <div class="search">
+            <!-- Search icon -->
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M10 4a6 6 0 1 0 3.9 10.6l4 4 1.4-1.4-4-4A6 6 0 0 0 10 4Zm0 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4Z"
+                />
+              </svg>
+            </span>
+            <!-- Search text field -->
+            <input type="text" placeholder="Search" />
+          </div>
+          <!-- Right side actions in top bar -->
+          <div class="topbar-actions">
+            <!-- Notifications button -->
+            <button class="icon-button" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 4a4 4 0 0 0-4 4v2.6l-1.6 2.7a1 1 0 0 0 .9 1.5h9.4a1 1 0 0 0 .9-1.5L16 10.6V8a4 4 0 0 0-4-4Zm0 16a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2Z"
+                />
+              </svg>
+            </button>
+            <!-- Small user avatar -->
+            <div class="avatar small">MO</div>
+            <!-- Username label -->
+            <span class="user-name">Morgan Oakley</span>
+          </div>
+        </header>
+
+        <!-- Greeting and quick action buttons -->
+        <section class="hero">
+          <!-- Greeting with avatar -->
+          <div class="greeting">
+            <div class="avatar large">MO</div>
+            <div>
+              <p class="hello">Hi there,</p>
+              <h2>Morgan Oakley (@morgan)</h2>
+            </div>
+          </div>
+          <!-- Primary action buttons -->
+          <div class="hero-actions">
+            <button class="primary">New</button>
+            <button class="primary">Upload</button>
+            <button class="primary">Share</button>
+          </div>
+        </section>
+
+        <!-- Main content grid: projects + side panels -->
+        <section class="content">
+          <!-- Projects column -->
+          <div class="projects-section">
+            <h3>Your Projects</h3>
+            <!-- Cards grid -->
+            <div class="projects-grid">
+              <!-- Project card 1 -->
+              <article class="card project-card">
+                <div>
+                  <h4>Super Cool Project</h4>
+                  <p>
+                    Sed tempus ut lacus ut scelerisque. Suspendisse
+                    sollicitudin.
+                  </p>
+                </div>
+                <!-- Card action icons -->
+                <div class="card-actions">
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 4.5 14.2 9l4.9.7-3.5 3.4.8 4.9L12 15.7 7.6 18l.8-4.9L4.9 9.7 9.8 9Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 6c-5 0-8.7 4-9.7 6 1 2 4.7 6 9.7 6s8.7-4 9.7-6C20.7 10 17 6 12 6Zm0 9a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm12-6a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm0 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3ZM8.7 12.9l6.6 3.7 1-1.8-6.6-3.7Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </article>
+              <!-- Project card 2 -->
+              <article class="card project-card">
+                <div>
+                  <h4>Less Cool Project</h4>
+                  <p>
+                    Nullam condimentum ipsum ut lectus vehicula consectetur.
+                  </p>
+                </div>
+                <!-- Card action icons -->
+                <div class="card-actions">
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 4.5 14.2 9l4.9.7-3.5 3.4.8 4.9L12 15.7 7.6 18l.8-4.9L4.9 9.7 9.8 9Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 6c-5 0-8.7 4-9.7 6 1 2 4.7 6 9.7 6s8.7-4 9.7-6C20.7 10 17 6 12 6Zm0 9a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm12-6a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm0 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3ZM8.7 12.9l6.6 3.7 1-1.8-6.6-3.7Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </article>
+              <!-- Project card 3 -->
+              <article class="card project-card">
+                <div>
+                  <h4>Impossible App</h4>
+                  <p>
+                    Vivamus dictum rutrum arcu, a placerat velit sagittis id.
+                  </p>
+                </div>
+                <!-- Card action icons -->
+                <div class="card-actions">
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 4.5 14.2 9l4.9.7-3.5 3.4.8 4.9L12 15.7 7.6 18l.8-4.9L4.9 9.7 9.8 9Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 6c-5 0-8.7 4-9.7 6 1 2 4.7 6 9.7 6s8.7-4 9.7-6C20.7 10 17 6 12 6Zm0 9a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm12-6a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm0 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3ZM8.7 12.9l6.6 3.7 1-1.8-6.6-3.7Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </article>
+              <!-- Project card 4 -->
+              <article class="card project-card">
+                <div>
+                  <h4>Easy Peasy App</h4>
+                  <p>Etiam cursus eros ac efficitur fringilla.</p>
+                </div>
+                <!-- Card action icons -->
+                <div class="card-actions">
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 4.5 14.2 9l4.9.7-3.5 3.4.8 4.9L12 15.7 7.6 18l.8-4.9L4.9 9.7 9.8 9Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 6c-5 0-8.7 4-9.7 6 1 2 4.7 6 9.7 6s8.7-4 9.7-6C20.7 10 17 6 12 6Zm0 9a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm12-6a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm0 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3ZM8.7 12.9l6.6 3.7 1-1.8-6.6-3.7Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </article>
+              <!-- Project card 5 -->
+              <article class="card project-card">
+                <div>
+                  <h4>Ad Blocker</h4>
+                  <p>
+                    Quisque eget rutrum nisl. Nam augue justo, cursus vitae.
+                  </p>
+                </div>
+                <!-- Card action icons -->
+                <div class="card-actions">
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 4.5 14.2 9l4.9.7-3.5 3.4.8 4.9L12 15.7 7.6 18l.8-4.9L4.9 9.7 9.8 9Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 6c-5 0-8.7 4-9.7 6 1 2 4.7 6 9.7 6s8.7-4 9.7-6C20.7 10 17 6 12 6Zm0 9a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm12-6a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm0 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3ZM8.7 12.9l6.6 3.7 1-1.8-6.6-3.7Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </article>
+              <!-- Project card 6 -->
+              <article class="card project-card">
+                <div>
+                  <h4>Money Maker</h4>
+                  <p>Praesent convallis libero quis congue elementum.</p>
+                </div>
+                <!-- Card action icons -->
+                <div class="card-actions">
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 4.5 14.2 9l4.9.7-3.5 3.4.8 4.9L12 15.7 7.6 18l.8-4.9L4.9 9.7 9.8 9Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 6c-5 0-8.7 4-9.7 6 1 2 4.7 6 9.7 6s8.7-4 9.7-6C20.7 10 17 6 12 6Zm0 9a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon-action" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm12-6a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm0 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3ZM8.7 12.9l6.6 3.7 1-1.8-6.6-3.7Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Right side panels column -->
+          <aside class="side-panels">
+            <!-- Announcements panel -->
+            <div class="panel">
+              <h3>Announcements</h3>
+              <!-- Announcement list -->
+              <div class="panel-body">
+                <!-- Announcement item 1 -->
+                <div class="panel-item">
+                  <h5>Site Maintenance</h5>
+                  <p>Vestibulum condimentum tellus lacus, in accumsan.</p>
+                </div>
+                <!-- Announcement item 2 -->
+                <div class="panel-item">
+                  <h5>Community Share Day</h5>
+                  <p>Nam vel lectus tincidunt, rutrum nulla eu.</p>
+                </div>
+                <!-- Announcement item 3 -->
+                <div class="panel-item">
+                  <h5>Updated Privacy Policy</h5>
+                  <p>Phasellus efficitur nisi eget elit consectetur.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trending panel -->
+            <div class="panel">
+              <h3>Trending</h3>
+              <!-- Trending list -->
+              <div class="panel-body">
+                <!-- Trending item 1 -->
+                <div class="trend">
+                  <div class="avatar tiny">T</div>
+                  <div>
+                    <p class="handle">@tegan</p>
+                    <p>World Peace Builder</p>
+                  </div>
+                </div>
+                <!-- Trending item 2 -->
+                <div class="trend">
+                  <div class="avatar tiny">MO</div>
+                  <div>
+                    <p class="handle">@morgan</p>
+                    <p>Super Cool Project</p>
+                  </div>
+                </div>
+                <!-- Trending item 3 -->
+                <div class="trend">
+                  <div class="avatar tiny">K</div>
+                  <div>
+                    <p class="handle">@kendall</p>
+                    <p>Life Changing App</p>
+                  </div>
+                </div>
+                <!-- Trending item 4 -->
+                <div class="trend">
+                  <div class="avatar tiny">A</div>
+                  <div>
+                    <p class="handle">@alex</p>
+                    <p>No Traffic Maker</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

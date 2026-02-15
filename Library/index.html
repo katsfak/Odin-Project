@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>My Library</h1>
+    <button class="new-book-btn">Add New Book</button>
+    <div class="book-container"></div>
+
+    <dialog class="book-dialog">
+      <div class="dialog-content">
+        <button class="close-btn" type="button">×</button>
+        <h2>Add New Book</h2>
+
+        <div class="dialog-tabs">
+          <button class="tab-btn active" data-tab="search-tab">
+            Search API
+          </button>
+          <button class="tab-btn" data-tab="manual-tab">Manual Entry</button>
+        </div>
+
+        <!-- Search Tab -->
+        <div id="search-tab" class="tab-content active">
+          <div class="form-group">
+            <label for="search-input">Search for a book:</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Enter title or author..."
+            />
+            <button type="button" id="search-btn" class="search-btn">
+              Search
+            </button>
+            <div id="loading-spinner" class="loading-spinner hidden">
+              Searching...
+            </div>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+
+        <!-- Manual Entry Tab -->
+        <div id="manual-tab" class="tab-content">
+          <form id="book-form">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" required />
+            </div>
+            <div class="form-group">
+              <label for="author">Author:</label>
+              <input type="text" id="author" required />
+            </div>
+            <div class="form-group">
+              <label for="pages">Number of Pages:</label>
+              <input type="number" id="pages" required />
+            </div>
+            <div class="form-group">
+              <label for="read">
+                <input type="checkbox" id="read" />
+                I have read this book
+              </label>
+            </div>
+            <button type="submit">Add Book</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

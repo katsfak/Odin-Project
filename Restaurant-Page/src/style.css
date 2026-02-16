@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #2c3e50;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+nav button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #c0392b;
+}
+
+/* Content Container */
+#content {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Home Page Styles */
+.home-page {
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.home-page h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home-page p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Menu Page Styles */
+.menu-page h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item h2 {
+  color: #e74c3c;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.menu-item .price {
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Contact Page Styles */
+.contact-page h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.contact-info > div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #e74c3c;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

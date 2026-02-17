@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #1e2430;
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid #dce2ef;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.project-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.project-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d7deed;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.project-btn.active {
+  border-color: #5b7cff;
+  background: #eef2ff;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.main-header {
+  margin-bottom: 1rem;
+}
+
+.grid,
+.stack {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.todo-form,
+.todo-details,
+#new-project-form {
+  background: #fff;
+  border: 1px solid #dce2ef;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.todo-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.todo-card {
+  border: 1px solid #dce2ef;
+  border-left: 6px solid #7f8aa7;
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.todo-card.completed {
+  opacity: 0.75;
+}
+
+.todo-card.completed h3 {
+  text-decoration: line-through;
+}
+
+.priority-low {
+  border-left-color: #2a9d8f;
+}
+
+.priority-medium {
+  border-left-color: #e9a03b;
+}
+
+.priority-high {
+  border-left-color: #e76f51;
+}
+
+.todo-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #ccd6ea;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  width: 100%;
+}
+
+button {
+  border: 1px solid #5b7cff;
+  background: #5b7cff;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+button.danger {
+  border-color: #d64545;
+  background: #d64545;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #dce2ef;
+  }
+
+  .todo-summary {
+    flex-direction: column;
+  }
+}

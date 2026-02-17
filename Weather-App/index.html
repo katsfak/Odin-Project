@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="weather-app" id="app">
+      <h1>Weather App</h1>
+      <p class="subtitle">
+        Search any city to get current weather and a short forecast.
+      </p>
+
+      <form id="weather-form" class="weather-form">
+        <label for="location-input">Location</label>
+        <div class="row">
+          <input
+            id="location-input"
+            name="location"
+            type="text"
+            placeholder="e.g. Athens, London, Tokyo"
+            required
+          />
+          <button type="submit">Get Weather</button>
+        </div>
+      </form>
+
+      <div id="loading" class="loading hidden">Loading weather data...</div>
+      <p id="message" class="message"></p>
+
+      <section
+        id="weather-result"
+        class="weather-result hidden"
+        aria-live="polite"
+      ></section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

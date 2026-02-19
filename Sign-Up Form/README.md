@@ -1,20 +1,18 @@
-# Library
+# Sign-Up Form
 
 ## Overview
 
-Library app project for managing books, read status, and local persistence.
+Sign-up form layout and validation practice project.
 
 ## Tech Stack
 
 - HTML
 - CSS
-- JavaScript
 
 ## Project Files
 
 - `index.html`
 - `style.css`
-- `script.js`
 
 ## How to Run
 
@@ -22,4 +20,4 @@ Open `index.html` in your browser.
 
 ## Status
 
-Completed and functional in browser.
+Completed as part of The Odin Project Foundations curriculum.

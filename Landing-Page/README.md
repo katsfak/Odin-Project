@@ -1,27 +1,23 @@
 # Landing Page
 
-A responsive landing page built as part of The Odin Project curriculum. It recreates the provided design with a clean hero, info cards, a quote section, and a call-to-action block.
+## Overview
 
-## Features
+Responsive landing page layout project from The Odin Project Foundations curriculum.
 
-- Responsive layout with flexible sections
-- Hero, information cards, testimonial, and CTA sections
-- Simple, consistent typography and spacing
+## Tech Stack
 
-## Built With
+- HTML
+- CSS
 
-- HTML5
-- CSS3 (Flexbox)
+## Project Files
 
-## Getting Started
+- `index.html`
+- `style.css`
 
-1. Open `index.html` in your browser.
+## How to Run
 
-## Project Structure
+Open `index.html` in your browser.
 
-- `index.html` - Page markup
-- `style.css` - Styles and layout
+## Status
 
-## Credits
-
-- Design and assignment: The Odin Project
+Completed as part of The Odin Project Foundations curriculum.

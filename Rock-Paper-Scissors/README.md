@@ -1,30 +1,25 @@
 # Rock Paper Scissors
 
-A simple Rock Paper Scissors game built for The Odin Project. The game runs in the browser using prompts and alerts for input and feedback.
+## Overview
 
-## Features
+Browser-based Rock Paper Scissors game project.
 
-- Random computer choice each round
-- Input validation for player choice
-- Best-of-five gameplay with a final winner
+## Tech Stack
 
-## Built With
-
-- HTML5
+- HTML
+- CSS
 - JavaScript
 
-## How To Play
+## Project Files
 
-1. Open `index.html` in your browser.
-2. Enter your choice when prompted: rock, paper, or scissors.
-3. Play five rounds and view the final result.
+- `index.html`
+- `style.css`
+- `script.js`
 
-## Project Structure
+## How to Run
 
-- `index.html` - Page shell and script loading
-- `script.js` - Game logic
-- `style.css` - Styles (currently empty)
+Open `index.html` in your browser.
 
-## Credits
+## Status
 
-- Assignment and design: The Odin Project
+Completed as part of The Odin Project Foundations curriculum.

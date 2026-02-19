@@ -1,35 +1,23 @@
 # Admin Dashboard
 
-<!-- Short project summary -->
+## Overview
 
-Static admin dashboard layout inspired by The Odin Project. Built with semantic HTML and modern CSS grid/flexbox to match the reference design.
+Static admin dashboard layout project from The Odin Project Foundations curriculum.
 
-## Preview
+## Tech Stack
 
-<!-- How to view the page -->
+- HTML
+- CSS
 
-Open [index.html](index.html) in your browser.
+## Project Files
 
-## Features
+- `index.html`
+- `style.css`
 
-<!-- Feature highlights -->
+## How to Run
 
-- Two-column layout with sidebar navigation
-- Top search bar and profile header
-- Project cards grid with action icons
-- Announcements and trending side panels
-- Responsive behavior for tablet/mobile
+Open `index.html` in your browser.
 
-## Project Structure
+## Status
 
-<!-- File breakdown -->
-
-- [index.html](index.html) - Markup for the dashboard layout
-- [style.css](style.css) - Styling, layout, and icons
-
-## Notes
-
-<!-- Extra implementation notes -->
-
-- Icons are inline SVGs, so there are no external icon dependencies.
-- Font is loaded from Google Fonts in the CSS.
+Completed as part of The Odin Project practice projects.

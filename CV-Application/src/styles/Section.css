@@ -1,0 +1,47 @@
+.section-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.section-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.section-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.section-form label {
+  font-weight: 600;
+}
+
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.section-form button,
+.submitted-content button {
+  margin-top: 0.5rem;
+  width: fit-content;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.submitted-content {
+  display: grid;
+  gap: 0.5rem;
+}

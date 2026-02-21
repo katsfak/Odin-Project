@@ -1,0 +1,148 @@
+#root {
+  width: min(1200px, 100% - 3rem);
+  margin: 0 auto;
+  padding: 2.5rem 0 2rem;
+}
+
+.app {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 18px;
+  padding: 1.2rem 1.3rem;
+  backdrop-filter: blur(6px);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: #93c5fd;
+}
+
+h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.status {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.scoreboard {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 170px;
+}
+
+.scoreboard p {
+  margin: 0;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scoreboard span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.card-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.9rem;
+}
+
+.memory-card {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 15px;
+  background: linear-gradient(
+    165deg,
+    rgba(30, 41, 59, 0.95),
+    rgba(15, 23, 42, 0.96)
+  );
+  color: #f8fafc;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.65rem;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.35);
+}
+
+.memory-card:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.memory-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: radial-gradient(circle at center, #f8fafc 0%, #dbeafe 70%);
+  border-radius: 12px;
+}
+
+.memory-card__text h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.memory-card__text p {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.info,
+.error,
+.footer-note {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #fda4af;
+}
+
+.footer-note {
+  color: #94a3b8;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

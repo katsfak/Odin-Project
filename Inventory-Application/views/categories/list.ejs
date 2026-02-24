@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<section class="panel">
+  <div class="panel-header">
+    <h1>Categories</h1>
+    <a href="/categories/new" class="button-link">Create Category</a>
+  </div>
+  <% if (categories.length === 0) { %>
+    <p>No categories yet.</p>
+  <% } else { %>
+    <ul class="list-grid">
+      <% categories.forEach((category) => { %>
+        <li>
+          <h2><a href="/categories/<%= category.id %>"><%= category.name %></a></h2>
+          <p><%= category.description || 'No description.' %></p>
+          <p><strong>Items:</strong> <%= category.item_count %></p>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

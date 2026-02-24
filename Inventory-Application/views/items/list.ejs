@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<section class="panel">
+  <div class="panel-header">
+    <h1>Items</h1>
+    <a href="/items/new" class="button-link">Create Item</a>
+  </div>
+
+  <% if (items.length === 0) { %>
+    <p>No items yet.</p>
+  <% } else { %>
+    <ul class="list-grid">
+      <% items.forEach((item) => { %>
+        <li>
+          <h2><a href="/items/<%= item.id %>"><%= item.name %></a></h2>
+          <p>Category: <a href="/categories/<%= item.category_id %>"><%= item.category_name %></a></p>
+          <p>SKU: <%= item.sku %></p>
+          <p>Price: €<%= (item.price_cents / 100).toFixed(2) %></p>
+          <p>Stock: <%= item.stock_quantity %></p>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

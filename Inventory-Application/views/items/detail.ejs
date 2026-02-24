@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<section class="panel">
+  <div class="panel-header">
+    <h1><%= item.name %></h1>
+    <div class="actions">
+      <a href="/items/<%= item.id %>/edit" class="button-link">Edit</a>
+    </div>
+  </div>
+
+  <p><%= item.description || 'No description.' %></p>
+  <p><strong>Category:</strong> <a href="/categories/<%= item.category_id %>"><%= item.category_name %></a></p>
+  <p><strong>SKU:</strong> <%= item.sku %></p>
+  <p><strong>Price:</strong> €<%= (item.price_cents / 100).toFixed(2) %></p>
+  <p><strong>Stock:</strong> <%= item.stock_quantity %></p>
+</section>
+
+<section class="panel danger-panel">
+  <h2>Delete Item</h2>
+  <%- include('../partials/errors', { errors }) %>
+  <form action="/items/<%= item.id %>?_method=DELETE" method="POST" class="stack-form">
+    <label for="adminPassword">Admin password</label>
+    <input id="adminPassword" name="adminPassword" type="password" value="<%= formData.adminPassword || '' %>" required />
+    <button type="submit" class="danger">Delete Item</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

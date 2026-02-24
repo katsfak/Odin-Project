@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<section class="panel">
+  <h1><%= heading %></h1>
+  <%- include('../partials/errors', { errors }) %>
+
+  <form action="<%= action %>" method="POST" class="stack-form">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" value="<%= item.name || '' %>" required />
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="4"><%= item.description || '' %></textarea>
+
+    <label for="sku">SKU</label>
+    <input id="sku" name="sku" type="text" value="<%= item.sku || '' %>" required />
+
+    <label for="priceCents">Price (in cents)</label>
+    <input id="priceCents" name="priceCents" type="number" min="0" value="<%= item.price_cents ?? item.priceCents ?? '' %>" required />
+
+    <label for="stockQuantity">Stock quantity</label>
+    <input id="stockQuantity" name="stockQuantity" type="number" min="0" value="<%= item.stock_quantity ?? item.stockQuantity ?? '' %>" required />
+
+    <label for="categoryId">Category</label>
+    <select id="categoryId" name="categoryId" required>
+      <option value="">Select category</option>
+      <% categories.forEach((category) => { %>
+        <% const selected = String(item.category_id ?? item.categoryId ?? '') === String(category.id); %>
+        <option value="<%= category.id %>" <%= selected ? 'selected' : '' %>><%= category.name %></option>
+      <% }) %>
+    </select>
+
+    <% if (requiresAdminPassword) { %>
+      <label for="adminPassword">Admin password</label>
+      <input id="adminPassword" name="adminPassword" type="password" required />
+    <% } %>
+
+    <button type="submit">Save Item</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

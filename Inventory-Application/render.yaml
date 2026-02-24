@@ -1,0 +1,40 @@
+databases:
+  - name: inventory-db
+    plan: free
+    databaseName: inventory_app
+    user: inventory_user
+
+services:
+  - type: web
+    name: inventory-app
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_HOST
+        fromDatabase:
+          name: inventory-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: inventory-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: inventory-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: inventory-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: inventory-db
+          property: password
+      - key: ADMIN_SECRET_PASSWORD
+        sync: false

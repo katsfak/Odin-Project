@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+
+<section class="panel">
+  <h1>Inventory Dashboard</h1>
+  <p>Simple inventory manager with PostgreSQL-backed categories and items.</p>
+  <div class="stats">
+    <article>
+      <h2><%= stats.categoryCount %></h2>
+      <p>Categories</p>
+    </article>
+    <article>
+      <h2><%= stats.itemCount %></h2>
+      <p>Items</p>
+    </article>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+  background: #f5f7fb;
+  color: #152238;
+}
+
+a {
+  color: #1246a0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #0e2344;
+  color: #fff;
+}
+
+.site-header a {
+  color: #fff;
+  margin-right: 0.9rem;
+}
+
+.site-header .brand {
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #dbe4f0;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.button-link,
+button {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.45rem;
+  border: 1px solid #9eb3d4;
+  background: #e9f0ff;
+  color: #12294d;
+  cursor: pointer;
+}
+
+button:hover,
+.button-link:hover {
+  background: #dbe8ff;
+  text-decoration: none;
+}
+
+.danger {
+  background: #ffe8e8;
+  border-color: #e2a3a3;
+  color: #7a1c1c;
+}
+
+.danger-panel {
+  border-color: #e4b2b2;
+}
+
+.stack-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #c7d4ea;
+  border-radius: 0.45rem;
+  padding: 0.6rem;
+}
+
+.errors {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #e2a3a3;
+  border-radius: 0.45rem;
+  background: #fff1f1;
+  color: #7a1c1c;
+}
+
+.list-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.8rem;
+}
+
+.list-grid li {
+  border: 1px solid #dbe4f0;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  background: #fafcff;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.stats article {
+  background: #f2f7ff;
+  border: 1px solid #d5e2f8;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  min-width: 130px;
+}

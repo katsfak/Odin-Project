@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+
+<section class="panel">
+  <div class="panel-header">
+    <h1><%= category.name %></h1>
+    <div class="actions">
+      <a href="/categories/<%= category.id %>/edit" class="button-link">Edit</a>
+    </div>
+  </div>
+  <p><%= category.description || 'No description.' %></p>
+
+  <h2>Items in this category</h2>
+  <% if (category.items.length === 0) { %>
+    <p>No items in this category.</p>
+  <% } else { %>
+    <ul class="list-grid">
+      <% category.items.forEach((item) => { %>
+        <li>
+          <h3><a href="/items/<%= item.id %>"><%= item.name %></a></h3>
+          <p>SKU: <%= item.sku %></p>
+          <p>Price: €<%= (item.price_cents / 100).toFixed(2) %></p>
+          <p>Stock: <%= item.stock_quantity %></p>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
+
+<section class="panel danger-panel">
+  <h2>Delete Category</h2>
+  <p>Deletion is blocked if category still contains items.</p>
+  <%- include('../partials/errors', { errors }) %>
+  <form action="/categories/<%= category.id %>?_method=DELETE" method="POST" class="stack-form">
+    <label for="adminPassword">Admin password</label>
+    <input id="adminPassword" name="adminPassword" type="password" value="<%= formData.adminPassword || '' %>" required />
+    <button type="submit" class="danger">Delete Category</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

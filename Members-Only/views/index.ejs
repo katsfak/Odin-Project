@@ -1,0 +1,95 @@
+<% 
+const layout = (body) => {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title} - Members Only</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">Members Only</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        ${currentUser ? `
+          <li><a href="/message/new">New Message</a></li>
+          ${!currentUser.is_member ? '<li><a href="/member/join">Join Club</a></li>' : ''}
+          <li><span class="user-info">
+            ${currentUser.first_name} 
+            ${currentUser.is_member ? '(Member)' : ''}
+            ${currentUser.is_admin ? '(Admin)' : ''}
+          </span></li>
+          <li><a href="/auth/logout" class="btn-secondary">Logout</a></li>
+        ` : `
+          <li><a href="/auth/login">Login</a></li>
+          <li><a href="/auth/signup" class="btn-primary">Sign Up</a></li>
+        `}
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    ${body}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Members Only. Built with Express & PostgreSQL.</p>
+    </div>
+  </footer>
+</body>
+</html>`;
+}
+-%>
+
+<%- layout(`
+  <div class="hero">
+    <h1>Welcome to Members Only</h1>
+    <p class="subtitle">A private message board for exclusive members</p>
+  </div>
+
+  <section class="messages-section">
+    <h2>Recent Messages</h2>
+    
+    <% if (messages.length === 0) { %>
+      <p class="no-messages">No messages yet. Be the first to post!</p>
+    <% } else { %>
+      <div class="messages-grid">
+        <% messages.forEach(message => { %>
+          <article class="message-card">
+            <h3 class="message-title"><%= message.title %></h3>
+            <p class="message-text"><%= message.text %></p>
+            
+            <% if (currentUser && currentUser.is_member) { %>
+              <div class="message-meta">
+                <span class="message-author">
+                  By <%= message.first_name %> <%= message.last_name %>
+                </span>
+                <span class="message-date">
+                  <%= new Date(message.created_at).toLocaleDateString() %>
+                </span>
+              </div>
+            <% } else { %>
+              <div class="message-meta">
+                <span class="message-hidden">
+                  🔒 Join the club to see author details
+                </span>
+              </div>
+            <% } %>
+            
+            <% if (currentUser && currentUser.is_admin) { %>
+              <form method="POST" action="/message/delete/<%= message.id %>" class="delete-form">
+                <button type="submit" class="btn-danger" onclick="return confirm('Are you sure you want to delete this message?')">
+                  Delete
+                </button>
+              </form>
+            <% } %>
+          </article>
+        <% }); %>
+      </div>
+    <% } %>
+  </section>
+`) %>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> - Members Only</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">Members Only</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <% if (currentUser) { %>
+          <li><a href="/message/new">New Message</a></li>
+          <% if (!currentUser.is_member) { %>
+            <li><a href="/member/join">Join Club</a></li>
+          <% } %>
+          <li><span class="user-info">
+            <%= currentUser.first_name %>
+            <% if (currentUser.is_member) { %>(Member)<% } %>
+            <% if (currentUser.is_admin) { %>(Admin)<% } %>
+          </span></li>
+          <li><a href="/auth/logout" class="btn-secondary">Logout</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="form-container">
+      <h1>🔒 Join the Club</h1>
+      <p class="join-description">
+        Enter the secret passcode to become a member and see who wrote each message!
+      </p>
+      
+      <% if (errors.length > 0) { %>
+        <div class="errors">
+          <ul>
+            <% errors.forEach(error => { %>
+              <li><%= error.msg %></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
+
+      <form method="POST" action="/member/join" class="auth-form">
+        <div class="form-group">
+          <label for="passcode">Secret Passcode</label>
+          <input type="password" id="passcode" name="passcode" required autofocus>
+          <small>Hint: Check the .env.example file or ask the administrator</small>
+        </div>
+
+        <button type="submit" class="btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Members Only. Built with Express & PostgreSQL.</p>
+    </div>
+  </footer>
+</body>
+</html>

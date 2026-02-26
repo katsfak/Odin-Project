@@ -1,0 +1,144 @@
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 2rem;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.back-btn {
+  background: transparent;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  color: #764ba2;
+  transform: none;
+  box-shadow: none;
+}
+
+.profile-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+  margin-bottom: 1.5rem;
+  color: #667eea;
+  text-align: center;
+}
+
+.profile-view {
+  text-align: center;
+}
+
+.profile-info {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.profile-info p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.profile-info strong {
+  color: #667eea;
+}
+
+.edit-btn {
+  background: #667eea;
+  color: white;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+}
+
+.edit-btn:hover {
+  background: #764ba2;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.profile-form input,
+.profile-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.avatar-preview {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.avatar-preview img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.button-group button[type="submit"] {
+  background: #667eea;
+  color: white;
+}
+
+.button-group button[type="button"] {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.button-group button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}

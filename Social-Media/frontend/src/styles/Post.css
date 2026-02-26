@@ -1,0 +1,153 @@
+.post {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px;
+  transition: background-color 0.2s;
+}
+
+.post:hover {
+  background-color: #f8f9fa;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.post-author {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-author .avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.post-author .username {
+  margin: 0;
+  font-weight: 600;
+  color: #1c1e21;
+}
+
+.post-author .timestamp {
+  display: block;
+  color: #65676b;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #65676b;
+  font-size: 18px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #e74c3c;
+}
+
+.post-content {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.post-content p {
+  margin: 0 0 12px 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  max-height: 400px;
+}
+
+.post-footer {
+  display: flex;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #65676b;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: #0a66c2;
+}
+
+.action-btn.liked {
+  color: #e74c3c;
+}
+
+.comments-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.comment-form textarea {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 14px;
+}
+
+.comment-form textarea:focus {
+  outline: none;
+  border-color: #0a66c2;
+}
+
+.comment-form button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.no-comments {
+  text-align: center;
+  color: #65676b;
+  padding: 16px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .post {
+    padding: 12px;
+  }
+}

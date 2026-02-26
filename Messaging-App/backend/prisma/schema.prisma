@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  username  String  @unique
+  email     String  @unique
+  passwordHash String
+  avatar    String? // URL to avatar image
+  bio       String?
+  isOnline  Boolean @default(false)
+  lastSeen  DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Messages sent by this user
+  sentMessages Message[] @relation("sender")
+  
+  // Messages received by this user
+  receivedMessages Message[] @relation("recipient")
+  
+  // Friendships initiated by this user
+  friendshipsInitiated Friendship[] @relation("user1")
+  
+  // Friendships where this user was added
+  friendshipsReceived Friendship[] @relation("user2")
+  
+  // Group chats this user is part of
+  groupChats GroupChat[]
+  
+  // Messages in group chats
+  groupMessages GroupMessage[]
+}
+
+model Message {
+  id        Int     @id @default(autoincrement())
+  content   String
+  imageUrl  String? // URL to image if message contains an image
+  senderId  Int
+  sender    User    @relation("sender", fields: [senderId], references: [id], onDelete: Cascade)
+  recipientId Int
+  recipient User    @relation("recipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  isRead    Boolean @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([senderId])
+  @@index([recipientId])
+  @@index([createdAt])
+}
+
+model Friendship {
+  id        Int     @id @default(autoincrement())
+  user1Id   Int
+  user1     User    @relation("user1", fields: [user1Id], references: [id], onDelete: Cascade)
+  user2Id   Int
+  user2     User    @relation("user2", fields: [user2Id], references: [id], onDelete: Cascade)
+  status    String  @default("pending") // pending, accepted, blocked
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([user1Id, user2Id])
+  @@index([status])
+}
+
+model GroupChat {
+  id        Int     @id @default(autoincrement())
+  name      String
+  description String?
+  createdBy Int
+  members   User[]
+  messages  GroupMessage[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model GroupMessage {
+  id        Int     @id @default(autoincrement())
+  content   String
+  imageUrl  String?
+  senderId  Int
+  sender    User    @relation(fields: [senderId], references: [id], onDelete: Cascade)
+  groupChatId Int
+  groupChat GroupChat @relation(fields: [groupChatId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([senderId])
+  @@index([groupChatId])
+}

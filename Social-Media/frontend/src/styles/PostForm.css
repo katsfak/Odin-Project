@@ -1,0 +1,84 @@
+.post-form {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px;
+}
+
+.post-form-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.post-form-header .avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.post-form-header .username {
+  margin: 0;
+  font-weight: 500;
+  color: #1c1e21;
+}
+
+.post-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 16px;
+  outline: none;
+}
+
+.post-form textarea:focus {
+  border-color: #0a66c2;
+}
+
+.post-form-footer {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+  color: #65676b;
+  font-size: 13px;
+}
+
+.post-form button[type="submit"] {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .post-form {
+    padding: 12px;
+  }
+
+  .post-form-header {
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id        Int     @id @default(autoincrement())
+  imageId   Int
+  image     Image   @relation(fields: [imageId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([imageId])
+}
+
+model Image {
+  id            Int         @id @default(autoincrement())
+  title         String
+  imageUrl      String
+  description   String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  
+  characters    Character[]
+  games         Game[]
+  highScores    HighScore[]
+}
+
+model Character {
+  id          Int       @id @default(autoincrement())
+  name        String
+  imageId     Int
+  image       Image     @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  
+  // Coordinates should be normalized (0-1 range)
+  // We'll store pixel coordinates and calculate normalized ones
+  pixelX      Int       // Original pixel X coordinate
+  pixelY      Int       // Original pixel Y coordinate
+  
+  // For validation tolerance - we'll accept clicks within this radius (in pixels at original size)
+  radius      Int       @default(30)
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([imageId])
+}
+
+model HighScore {
+  id        Int     @id @default(autoincrement())
+  imageId   Int
+  image     Image   @relation(fields: [imageId], references: [id])
+  
+  playerName String
+  timeInSeconds Int  // Time to find all characters
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([imageId, timeInSeconds])
+}

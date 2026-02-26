@@ -1,0 +1,113 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String     @id @default(cuid())
+  username          String     @unique
+  email             String     @unique
+  passwordHash      String
+  bio               String?
+  profileImage      String?
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  // Relations
+  posts             Post[]
+  comments          Comment[]
+  likes             Like[]
+  commentLikes      CommentLike[]
+  
+  // Following relationships
+  followers         Follow[]   @relation("following")
+  following         Follow[]   @relation("follower")
+
+  @@index([createdAt])
+}
+
+model Post {
+  id                String     @id @default(cuid())
+  content           String
+  imageUrl          String?
+  authorId          String
+  author            User       @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  // Relations
+  likes             Like[]
+  comments          Comment[]
+
+  @@index([authorId])
+  @@index([createdAt])
+}
+
+model Like {
+  id                String     @id @default(cuid())
+  userId            String
+  user              User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  postId            String
+  post              Post       @relation(fields: [postId], references: [id], onDelete: Cascade)
+  createdAt         DateTime   @default(now())
+
+  // Ensure user can only like a post once
+  @@unique([userId, postId])
+  @@index([userId])
+  @@index([postId])
+}
+
+model Comment {
+  id                String     @id @default(cuid())
+  content           String
+  authorId          String
+  author            User       @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  postId            String
+  post              Post       @relation(fields: [postId], references: [id], onDelete: Cascade)
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  // Relations
+  likes             CommentLike[]
+
+  @@index([authorId])
+  @@index([postId])
+  @@index([createdAt])
+}
+
+model CommentLike {
+  id                String     @id @default(cuid())
+  userId            String
+  user              User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  commentId         String
+  comment           Comment    @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  createdAt         DateTime   @default(now())
+
+  // Ensure user can only like a comment once
+  @@unique([userId, commentId])
+  @@index([userId])
+  @@index([commentId])
+}
+
+model Follow {
+  id                String     @id @default(cuid())
+  followerId        String
+  follower          User       @relation("follower", fields: [followerId], references: [id], onDelete: Cascade)
+  followingId       String
+  following         User       @relation("following", fields: [followingId], references: [id], onDelete: Cascade)
+  status            String     @default("pending")  // pending, accepted, blocked
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  // Ensure unique follow relationships
+  @@unique([followerId, followingId])
+  @@index([followerId])
+  @@index([followingId])
+}

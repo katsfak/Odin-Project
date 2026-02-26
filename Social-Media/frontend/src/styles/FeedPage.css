@@ -1,0 +1,49 @@
+.feed-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.feed-content {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.posts-list {
+  border-top: 1px solid #e5e7eb;
+}
+
+.load-more-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: white;
+  color: #0a66c2;
+  font-weight: 500;
+  border-top: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.load-more-btn:hover {
+  background-color: #f0f2f5;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 40px 20px;
+  color: #65676b;
+}
+
+@media (max-width: 768px) {
+  .feed-container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .feed-content {
+    border-radius: 0;
+  }
+}

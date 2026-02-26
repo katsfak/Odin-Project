@@ -1,0 +1,222 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 350px;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #667eea;
+}
+
+.user-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.current-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.current-user .username {
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.current-user small {
+  display: block;
+  color: #10b981;
+  font-size: 0.8rem;
+}
+
+.settings-btn {
+  background: transparent;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+}
+
+.settings-btn:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f9f9f9;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #666;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: #667eea;
+  box-shadow: none;
+  transform: none;
+}
+
+.tab-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.search-box {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.conversation-list,
+.user-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.conversation-item,
+.user-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-items: center;
+  position: relative;
+}
+
+.conversation-item:hover,
+.user-item:hover {
+  background: #f5f5f5;
+  transform: translateX(4px);
+}
+
+.conversation-info,
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.conversation-info h3,
+.user-info h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.last-message {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bio {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unread-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.placeholder {
+  text-align: center;
+  color: #999;
+}
+
+.placeholder p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    display: none;
+  }
+}

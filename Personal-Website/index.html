@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aikaterini Eirini Sfakianou - Web & Mobile Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Aikaterini Eirini Sfakianou - Web & Mobile Developer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet CSS for Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">👨‍💻</div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Web & Mobile Developer.</h1>
+          <p class="hero-subtitle">
+            I build beautiful web and mobile experiences, and I love what I do.
+          </p>
+          <div class="hero-avatar">
+            <img
+              src="https://avatars.githubusercontent.com/u/57565765?v=4"
+              alt="Aikaterini Eirini Sfakianou"
+              class="avatar-image"
+            />
+          </div>
+        </div>
+        <div class="hero-wave">
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+              fill="#ffffff"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+      <div class="container">
+        <h2 class="section-title">
+          Hi, I'm Aikaterini Eirini Sfakianou. Nice to meet you.
+        </h2>
+        <p class="intro-text">
+          I'm an aspiring Software Engineer passionate about Web and Mobile
+          Development. I love building applications using Flutter, JavaScript,
+          and modern web technologies. When I'm not coding, you'll find me
+          traveling to new places or running. I'm a fast learner who enjoys
+          tackling challenges and continuously improving my skills.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+      <div class="container">
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">📱</div>
+            <h3>Mobile Developer</h3>
+            <p>
+              I build cross-platform mobile applications with beautiful UI and
+              smooth user experience.
+            </p>
+            <h4>Mobile Technologies:</h4>
+            <ul class="tool-list">
+              <li>Flutter</li>
+              <li>Firebase</li>
+              <li>Dart</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>Full-Stack Developer</h3>
+            <p>
+              I develop complete web applications from frontend to backend,
+              working with modern frameworks and databases.
+            </p>
+            <h4>Frontend:</h4>
+            <ul class="tool-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+            </ul>
+            <h4>Backend & Languages:</h4>
+            <ul class="tool-list">
+              <li>Java</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+            </ul>
+            <h4>Databases:</h4>
+            <ul class="tool-list">
+              <li>MySQL</li>
+              <li>MariaDB</li>
+              <li>Oracle SQL Developer</li>
+              <li>MongoDB</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🛠️</div>
+            <h3>Dev Tools & Languages</h3>
+            <p>
+              I'm proficient with essential development tools and multiple
+              programming languages for various applications.
+            </p>
+            <h4>Version Control & Collaboration:</h4>
+            <ul class="tool-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Trello</li>
+            </ul>
+            <h4>Design & Prototyping:</h4>
+            <ul class="tool-list">
+              <li>Figma</li>
+            </ul>
+            <h4>Systems & Low-Level:</h4>
+            <ul class="tool-list">
+              <li>C</li>
+              <li>C++</li>
+              <li>C#</li>
+              <li>Unity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My Recent Work</h2>
+        <p class="section-subtitle">
+          Here are a few projects I've worked on recently. Want to see more?
+          <a
+            href="https://github.com/katsfak"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit my GitHub</a
+          >.
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">🦢</div>
+            </div>
+            <h3>Swan App</h3>
+            <p>
+              A Flutter mobile application built with Dart, showcasing modern
+              mobile development practices.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/katsfak/Swan_App"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">💪</div>
+            </div>
+            <h3>Gym Simulator</h3>
+            <p>
+              Unity game simulating gym operations. Created for Human–Computer
+              Interaction course using C#.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/katsfak/Gym"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">🤖</div>
+            </div>
+            <h3>AI Assistant</h3>
+            <p>
+              An AI chat assistant built with Flutter that integrates various
+              Python models. Created for Electronic Learning course.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/katsfak/Ai-Assistant"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">🔍</div>
+            </div>
+            <h3>Search Engine</h3>
+            <p>
+              A search engine implementation demonstrating data collection,
+              preprocessing, indexing, and retrieval for Information Retrieval
+              course.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/katsfak/search_engine"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">🎯</div>
+            </div>
+            <h3>Odin Project</h3>
+            <p>
+              My journey through The Odin Project curriculum, building
+              full-stack web applications with JavaScript.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/katsfak/Odin-Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm Aikaterini Eirini Sfakianou, based in Athens, Greece. I'm
+              passionate about creating beautiful web and mobile applications. I
+              specialize in Flutter for mobile development and JavaScript for
+              web development, and I love exploring AI integration in
+              applications.
+            </p>
+            <p>
+              When I'm not coding, you'll find me traveling to discover new
+              places and cultures, or running to stay active and clear my mind.
+              I'm a fast learner who thrives on challenges and believes in
+              continuous improvement.
+            </p>
+            <p>
+              I'm currently looking for opportunities in Web & Mobile
+              Development where I can contribute my skills, learn from
+              experienced developers, and grow professionally. If you have an
+              exciting project or opportunity, I'd love to hear from you!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music">
+      <div class="container">
+        <h2 class="section-title">What I'm Listening To</h2>
+        <p class="section-subtitle">Music fuels my coding sessions 🎵</p>
+        <div class="spotify-container">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/5UOGB6ihPhl5v57D7Qecfc?utm_source=generator&theme=0"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              fullscreen;
+              picture-in-picture;
+            "
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Map Section -->
+    <section class="travel">
+      <div class="container">
+        <h2 class="section-title">My Travel Adventures</h2>
+        <p class="section-subtitle">
+          Exploring the world, one city at a time 🌍✈️
+        </p>
+        <div class="travel-content">
+          <div id="map"></div>
+          <div class="travel-info">
+            <h3>Places I've Explored</h3>
+            <div class="travel-grid">
+              <div class="travel-card">
+                <div class="travel-icon">🇬🇷</div>
+                <h4>Greece</h4>
+                <p>Home sweet home & endless discoveries</p>
+              </div>
+              <div class="travel-card">
+                <div class="travel-icon">🇭🇺</div>
+                <h4>Budapest</h4>
+                <p>Beautiful architecture & thermal baths</p>
+              </div>
+              <div class="travel-card">
+                <div class="travel-icon">🇵🇱</div>
+                <h4>Poland</h4>
+                <p>Rich history & vibrant culture</p>
+              </div>
+              <div class="travel-card">
+                <div class="travel-icon">🇦🇹</div>
+                <h4>Vienna</h4>
+                <p>Classical music & imperial palaces</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <h2>Interested in working together?</h2>
+          <p>
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
+          </p>
+          <div class="contact-buttons">
+            <a href="mailto:katsfak12@gmail.com" class="btn btn-primary"
+              >Get In Touch</a
+            >
+          </div>
+          <div class="social-links">
+            <a
+              href="https://github.com/katsfak"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/katsfak"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2026 Aikaterini Eirini Sfakianou. Built with ❤️ and lots of ☕
+        </p>
+      </div>
+    </footer>
+
+    <!-- Leaflet JavaScript for Map -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

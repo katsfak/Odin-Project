@@ -1,0 +1,20 @@
+<% layout('../layout') -%>
+<section class="card">
+  <h1>Shared folder: <%= folder.name %></h1>
+  <p>Expires: <%= new Date(share.expiresAt).toLocaleString() %></p>
+  <% if (files.length === 0) { %>
+  <p>No files available.</p>
+  <% } else { %>
+  <ul class="file-list">
+    <% files.forEach((file) => { %>
+    <li>
+      <div>
+        <strong><%= file.name %></strong>
+        <span><%= file.size %> bytes</span>
+      </div>
+      <a class="button secondary" href="/share/<%= share.id %>/files/<%= file.id %>/download">Download</a>
+    </li>
+    <% }) %>
+  </ul>
+  <% } %>
+</section>

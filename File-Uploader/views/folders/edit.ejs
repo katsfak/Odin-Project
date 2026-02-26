@@ -1,0 +1,17 @@
+<% layout('../layout') -%>
+<section class="card">
+  <h1>Edit folder</h1>
+  <form method="POST" action="/folders/<%= folder.id %>?_method=PUT">
+    <label>Name
+      <input type="text" name="name" value="<%= folder.name %>" required />
+    </label>
+    <button type="submit">Save</button>
+  </form>
+  <% if (errors && errors.length) { %>
+  <ul class="errors">
+    <% errors.forEach((err) => { %>
+    <li><%= err.msg %></li>
+    <% }) %>
+  </ul>
+  <% } %>
+</section>

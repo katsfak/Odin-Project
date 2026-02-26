@@ -1,0 +1,56 @@
+<% layout('../layout') -%>
+<section class="split">
+  <div>
+    <h1><%= folder.name %></h1>
+    <div class="actions">
+      <a class="button secondary" href="/folders/<%= folder.id %>/edit">Edit folder</a>
+      <form class="inline" action="/folders/<%= folder.id %>?_method=DELETE" method="POST">
+        <button class="danger" type="submit">Delete folder</button>
+      </form>
+    </div>
+
+    <h2>Files</h2>
+    <% if (files.length === 0) { %>
+    <p>No files uploaded yet.</p>
+    <% } else { %>
+    <ul class="file-list">
+      <% files.forEach((file) => { %>
+      <li>
+        <div>
+          <a href="/files/<%= file.id %>"><%= file.name %></a>
+          <span><%= file.sizeLabel %></span>
+        </div>
+        <div class="actions">
+          <a class="button secondary" href="/files/<%= file.id %>/download">Download</a>
+          <form class="inline" action="/files/<%= file.id %>?_method=DELETE" method="POST">
+            <button class="danger" type="submit">Delete</button>
+          </form>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+    <% } %>
+  </div>
+
+  <div>
+    <div class="card">
+      <h2>Upload file</h2>
+      <form method="POST" action="/folders/<%= folder.id %>/files" enctype="multipart/form-data">
+        <label>Select file
+          <input type="file" name="file" required />
+        </label>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Share folder</h2>
+      <form method="POST" action="/folders/<%= folder.id %>/share">
+        <label>Duration (e.g. 1d, 10d)
+          <input type="text" name="duration" placeholder="1d" required />
+        </label>
+        <button type="submit">Generate link</button>
+      </form>
+    </div>
+  </div>
+</section>

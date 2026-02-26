@@ -1,0 +1,18 @@
+<% layout('../layout') -%>
+<section class="card">
+  <h1><%= file.name %></h1>
+  <dl class="details">
+    <dt>Size</dt>
+    <dd><%= file.sizeLabel %></dd>
+    <dt>Type</dt>
+    <dd><%= file.mimeType %></dd>
+    <dt>Uploaded</dt>
+    <dd><%= new Date(file.uploadedAt).toLocaleString() %></dd>
+  </dl>
+  <div class="actions">
+    <a class="button" href="/files/<%= file.id %>/download">Download</a>
+    <a class="button secondary" href="/folders/<%= file.folderId %>"
+      >Back to folder</a
+    >
+  </div>
+</section>
